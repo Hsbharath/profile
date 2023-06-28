@@ -18,8 +18,11 @@ body{
     overflow: hidden;
     background-image: radial-gradient(145.05% 100% at 50% 0,#1d2b41 0,#162b46 57.38%,#0a1e38 88.16%);
 }
-a, p, h1, h2, h3, h4, h5, h6{
+a, p, h1, h2, h3, h4, h5, h6, span{
     color: var(--text-color-1);
+}
+ul li .icon{
+    color: theme(colors.gray);
 }
 a,p{
     font-size: 18px;
