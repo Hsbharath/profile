@@ -24,7 +24,7 @@ const profile = () => {
 
     return(
     <div className='w-full mx-auto'>
-        <h1 className="title lg:text-7xl text-5xl text-cyan-400 antialised line-clamp-1 font-black mt-6">{para2}</h1>
+        <h1 className="title lg:text-7xl text-5xl text-cyan-400 antialised line-clamp-1 font-black">{para2}</h1>
         <h3 className="title text-white text-3xl decoration-8 font-medium pb-3 ml-9">{para1}</h3>
         <p className="text-lg mb-6">{para3}</p>
         <ul className="list-unstyled mb-6">{iconsList}</ul>

@@ -18,12 +18,12 @@ const Layout = ({ children }) => {
         <Header/>
       </div>
       <div className="container lg:mx-auto px-6">
-      <main className="mt-6">
+      <main className="mt-9">
         <div className="flex xs:flex-wrap w-full items-start justify-center">
-          <div className="md:w-2/5 xs:w-full p-5">
+          <div className="md:w-2/5 xs:w-full px-5">
             <Profile/>
           </div>
-          <div className="md:w-3/5 xs:w-full p-5">
+          <div className="md:w-3/5 xs:w-full px-5">
             {children}
           </div>
         </div>

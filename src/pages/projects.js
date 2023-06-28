@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const projects = () => (
   <Layout>
-    <h1 className="title text-7xl text-cyan-400 antialised line-clamp-1 font-black p-3 ml-auto">Projects</h1>
+    <h1 className="title text-7xl text-cyan-400 antialised line-clamp-1 font-black pb-6 ml-auto">Projects</h1>
   </Layout>
 )
 
