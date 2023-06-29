@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const SecondPage = () => {
 
-  const pagetitle = <h1 className="title lg:text-7xl text-5xl text-cyan-400 antialised line-clamp-1 font-black pb-6 ml-auto">About</h1>; 
+  const pagetitle = <h1 className="title lg:text-6xl text-4xl text-cyan-400 antialised line-clamp-1 font-black pb-7 ml-auto">About</h1>; 
   const data1 = <p>With over 7 years of experience in the dynamic realm of web development, I have had the privilege of working with a diverse range of front-end technologies. Throughout my journey, I have witnessed the ever-evolving landscape of the web and continuously honed my skills to stay at the forefront of industry trends.</p>
   const data2 = <p>My passion for web development stems from a fascination with creating visually stunning and user-friendly experiences on the digital canvas. I possess a strong command of HTML, CSS, and JavaScript, leveraging these fundamental building blocks to craft elegant, responsive, and intuitive websites.</p>
   const data3 = <p>Over the years, I have had the opportunity to collaborate on numerous projects, both independently and within teams. This exposure has not only enriched my technical proficiency but also sharpened my communication and problem-solving abilities. I thrive in an environment where I can contribute my creativity and expertise to deliver high-quality solutions tailored to meet clients' unique needs.</p>

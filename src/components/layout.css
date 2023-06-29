@@ -1,45 +1,49 @@
 :root{
-    --dark-theme: rgba(15, 23, 42, 1);
-    --light-theme: rgba(249, 250, 251, 1);
-    --bg-cursor-color: azure;
-    --text-color-1: rgba(255, 255, 255, 1);
-    --text-color-2: rgba(0, 0, 0, 1);
     --space-0: 0px;
     --space-2: 12px;
     --space-4: 24px;
     --size-gap: 64px;
-    --size-gutter: 32px;
-    --height-value: 50px;
+    --text-color-1: rgba(255, 255, 255, 1);
+    --text-color-2: rgba(0, 0, 0, 1);
+    --text-color-3: rgba()
 }
 body{
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    height: 100vh;
+    min-height: 100vh;
+    font-family: 'Graphik', sans-serif;
     overflow: hidden;
-    background-image: radial-gradient(145.05% 100% at 50% 0,#1d2b41 0,#162b46 57.38%,#0a1e38 88.16%);
+    overflow-y: scroll;
+    background-image: radial-gradient(145.05% 100% at 50% 0, theme(colors.bodybg1) 0, theme(colors.bodybg2) 57.38%, theme(colors.bodybg3) 88.16%);
+}
+.main-view{
+    width: 1100px !important;
 }
 a, p, h1, h2, h3, h4, h5, h6, span{
     color: var(--text-color-1);
-}
-ul li .icon{
-    color: theme(colors.gray);
 }
 a,p{
     font-size: 18px;
     line-height: 28px;
     text-decoration:8px
 }
-.gatsby-logo{
-    height: 50px;
-    padding: var(--space-2);
+ul li .icon{
+    color: theme(colors.gray);
 }
-.line{
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(0.25turn, rgb(34 166 255) 40%, #00bcd4, rgba(56,2,155,0.7) 100%);
-    border-image-slice: 1;
+.header-section{
+    background-image: linear-gradient(0.25turn, theme(colors.header1) 10%, theme(colors.header2) 40%, theme(colors.header3) 60%, theme(colors.header4) 80%);
     width:100%;
+    height:68px;
+}
+.header-section a{
+    color: theme(colors.bodybg1);
+}
+.title, .title2{
+    font-family: "Caveat", sans-serif;
 }
 .title{
-    font-family: "Caveat";
+    color: theme(colors.blue);
 }
-
+.title2{
+    color: theme(colors.cyanaqua)
+}

@@ -7,11 +7,11 @@ const profile = () => {
 
     const para2 = "Bharath";
     const para1 = "Hunkunda Sreenivasa";
-    const para3 = "A passionate web developer with 7 years of experience in the industry. I thrive on building engaging and user-friendly websites that leave a lasting impression.";
+    const para3 = <p>A passionate <br/><span className='title2 font-bold tracking-widest'>WEB DEVELOPER</span><br/> I love to build user-friendly websites that leave a lasting impression.</p>;
 
     const icon1 = <p className="icon"><FontAwesomeIcon icon={faLocationDot} className="mr-3"/><span>Seattle, WA</span></p>
     const icon2 = <p className="icon"><FontAwesomeIcon icon={faEnvelope} className="mr-3"/><a href="mailto:bharathh.868@gmail.com">bharathh.868@gmail.com</a></p>
-    const icon3 = <p className="icon"><FontAwesomeIcon icon={faLink} className="mr-3"/><a href="https://hsbharath.dev" target="_blank" rel="noreferrer">https://hsbharath.dev</a></p>
+    const icon3 = <p className="icon"><FontAwesomeIcon icon={faLink} className="mr-3"/><a href="https://hsbharath.dev" target="_blank" rel="noreferrer">www.hsbharath.dev</a></p>
 
     const icons = [ icon1, icon2, icon3 ];
     const iconsList = icons.map((icon, i) => <li className="py-1" key={i}>{icon}</li> )
@@ -23,9 +23,9 @@ const profile = () => {
     const socialsList = socials.map((social, i) => <li className="pr-5" key={i}>{social}</li> )
 
     return(
-    <div className='w-full mx-auto'>
-        <h1 className="title lg:text-7xl text-5xl text-cyan-400 antialised line-clamp-1 font-black">{para2}</h1>
-        <h3 className="title text-white text-3xl decoration-8 font-medium pb-3 ml-9">{para1}</h3>
+    <div className='w-full mx-auto px-4'>
+        <h1 className="title lg:text-6xl text-4xl text-cyan-400 antialised line-clamp-1 font-black">{para2}</h1>
+        <h3 className="title text-white text-3xl decoration-8 font-medium pb-3">{para1}</h3>
         <p className="text-lg mb-6">{para3}</p>
         <ul className="list-unstyled mb-6">{iconsList}</ul>
         <ul className="flex list-unstyled mb-6">{socialsList}</ul>
