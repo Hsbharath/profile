@@ -13,22 +13,18 @@ import Profile from "./profile"
 const Layout = ({ children }) => {
 
   return (
-    <div className="w-screen mx-auto">
-      <div className="w-full line">
-        <Header/>
-      </div>
-      <div className="container lg:mx-auto px-6">
-      <main className="mt-9">
-        <div className="flex xs:flex-wrap w-full items-start justify-center">
-          <div className="md:w-2/5 xs:w-full px-5">
-            <Profile/>
-          </div>
-          <div className="md:w-3/5 xs:w-full px-5">
-            {children}
-          </div>
+    <div className="relative">
+      <div className="sticky top-0 left-0 right-0 mx-auto header-section z-50">
+          <Header/>
         </div>
-      </main>
-    </div>
+      <div className="max-w-screen-xl h-screen-100 mx-auto lg:flex lg:justify-between lg:gap-8 lg:main-view">
+        <div className="lg:w-4/12 py-20">
+          <Profile/>
+        </div>
+        <div className="lg:w-8/12 pr-4 py-20">
+          <main>{children}</main>
+        </div>
+      </div>
     </div>
   )
 }

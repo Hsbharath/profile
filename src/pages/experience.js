@@ -7,7 +7,7 @@ const experience = () => {
 
   return (
     <Layout>
-      <h1 className="title lg:text-7xl text-5xl text-cyan-400 antialised line-clamp-1 font-black pb-6 ml-auto">Experience</h1>
+      <h1 className="title lg:text-6xl text-4xl text-cyan-400 antialised line-clamp-1 font-black pb-6 ml-auto">Experience</h1>
     </Layout>
   )
 }
