@@ -14,15 +14,18 @@ const Layout = ({ children }) => {
 
   return (
     <div className="relative">
-      <div className="sticky top-0 left-0 right-0 mx-auto header-section z-50">
-          <Header/>
-        </div>
+      <div className="lg:hidden sticky top-0 left-0 right-0 mx-auto header-section z-50">
+        <Header type={'Horizontal'}/>
+      </div>
       <div className="max-w-screen-xl h-screen-100 mx-auto lg:flex lg:justify-between lg:gap-8 lg:main-view">
-        <div className="lg:w-4/12 py-20">
-          <Profile/>
+        <div className="lg:w-3/12 lg:py-20 md:py-10 sm:py-10 xs:py-10">
+          <Profile />
         </div>
-        <div className="lg:w-8/12 pr-4 py-20">
+        <div className="lg:w-6/12 px-4 lg:py-20 md:py-10 sm:py-5">
           <main>{children}</main>
+        </div>
+        <div className="lg:visible lg:w-3/12 px-4 lg:py-20 md:py-10 sm:py-5">
+          <Header type={'Vertical'}/>
         </div>
       </div>
     </div>

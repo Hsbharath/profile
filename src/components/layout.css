@@ -1,49 +1,93 @@
-:root{
-    --space-0: 0px;
-    --space-2: 12px;
-    --space-4: 24px;
-    --size-gap: 64px;
-    --text-color-1: rgba(255, 255, 255, 1);
-    --text-color-2: rgba(0, 0, 0, 1);
-    --text-color-3: rgba()
+:root {
+  --space-0: 0px;
+  --space-2: 12px;
+  --space-4: 24px;
+  --size-gap: 64px;
+  --text-color-1: rgba(255, 255, 255, 1);
+  --text-color-2: rgba(0, 0, 0, 1);
+  --text-color-3: rgba();
 }
-body{
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
-    font-family: 'Graphik', sans-serif;
-    overflow: hidden;
-    overflow-y: scroll;
-    background-image: radial-gradient(145.05% 100% at 50% 0, theme(colors.bodybg1) 0, theme(colors.bodybg2) 57.38%, theme(colors.bodybg3) 88.16%);
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  font-family: "Graphik", sans-serif;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-image: radial-gradient(
+    145.05% 100% at 50% 0,
+    theme(colors.bodybg1) 0,
+    theme(colors.bodybg2) 57.38%,
+    theme(colors.bodybg3) 88.16%
+  );
 }
-.main-view{
-    width: 1100px !important;
+.main-view {
+  width: 1100px !important;
 }
-a, p, h1, h2, h3, h4, h5, h6, span{
-    color: var(--text-color-1);
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: var(--text-color-1);
 }
-a,p{
-    font-size: 18px;
-    line-height: 28px;
-    text-decoration:8px
+a,
+p {
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: 8px;
 }
-ul li .icon{
-    color: theme(colors.gray);
+ul li .icon {
+  color: theme(colors.cyanaqua);
 }
-.header-section{
-    background-image: linear-gradient(0.25turn, theme(colors.header1) 10%, theme(colors.header2) 40%, theme(colors.header3) 60%, theme(colors.header4) 80%);
-    width:100%;
-    height:68px;
+.header-section {
+  background-image: linear-gradient(
+    0.25turn,
+    theme(colors.header1) 10%,
+    theme(colors.header2) 50%,
+    theme(colors.header3) 80%
+  );
+  width: 100%;
+  height: 68px;
 }
-.header-section a{
-    color: theme(colors.bodybg1);
+.header-section a {
+  color: theme(colors.bodybg1);
 }
-.title, .title2{
-    font-family: "Caveat", sans-serif;
+.title,
+.title2 {
+  font-family: "Caveat", sans-serif;
 }
-.title{
-    color: theme(colors.blue);
+.title {
+  color: theme(colors.blue);
 }
-.title2{
-    color: theme(colors.cyanaqua)
+.title2 {
+  color: theme(colors.cyanaqua);
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: theme(colors.gray);
+    border-radius: 50%;
+    position: relative;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid theme(colors.gray);
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.active{
+    background-color: theme(colors.cyanaqua);
+}
+.active .circle{
+    border-color: theme(colors.cyanaqua);
+    box-shadow: 0px 0px 20px 2px theme(colors.cyanaqua);
 }
