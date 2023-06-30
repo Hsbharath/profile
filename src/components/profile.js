@@ -13,28 +13,28 @@ const profile = () => {
   const para3 = (
     <p>
       A passionate <br />
-      <span className="title2 font-bold tracking-widest">WEB DEVELOPER</span>
+      <span className="text-[theme(colors.blue)] font-bold tracking-wide">WEB DEVELOPER</span>
       <br /> I love to build user-friendly websites that leave a lasting
       impression.
     </p>
   )
 
   const icon1 = (
-    <p className="icon">
-      <FontAwesomeIcon icon={faLocationDot} className="mr-3" />
-      <span>Seattle, WA</span>
+    <p className="icon flex gap-2 items-center justify-start">
+      <FontAwesomeIcon icon={faLocationDot} />
+      <span className="flex-1" >Seattle, WA</span>
     </p>
   )
   const icon2 = (
-    <p className="icon">
-      <FontAwesomeIcon icon={faEnvelope} className="mr-3" />
-      <a href="mailto:bharathh.868@gmail.com">bharathh.868@gmail.com</a>
+    <p className="icon flex gap-2 items-center justify-start">
+      <FontAwesomeIcon icon={faEnvelope} />
+      <a href="mailto:bharathh.868@gmail.com" className="flex-1" >bharathh.868@gmail.com</a>
     </p>
   )
   const icon3 = (
-    <p className="icon">
-      <FontAwesomeIcon icon={faLink} className="mr-3" />
-      <a href="https://hsbharath.dev" target="_blank" rel="noreferrer">
+    <p className="icon flex gap-2 items-center justify-start">
+      <FontAwesomeIcon icon={faLink} />
+      <a href="https://hsbharath.dev" target="_blank" rel="noreferrer"  className="flex-1" >
         www.hsbharath.dev
       </a>
     </p>
@@ -70,20 +70,20 @@ const profile = () => {
 
   const socials = [social1, social2]
   const socialsList = socials.map((social, i) => (
-    <li className="pr-5" key={i}>
+    <li className="px-2" key={i}>
       {social}
     </li>
   ))
 
   return (
-    <div className="w-full mx-auto px-4">
+    <div className="fixed top-25 lg:w-[300px] px-4">
       <h1 className="title lg:text-6xl text-4xl text-cyan-400 antialised line-clamp-1 font-black">
         {para2}
       </h1>
       <h3 className="title text-white text-3xl decoration-8 font-medium pb-3">
         {para1}
       </h3>
-      <p className="text-lg mb-6">{para3}</p>
+      <div className="text-lg mb-6">{para3}</div>
       <ul className="list-unstyled mb-6">{iconsList}</ul>
       <ul className="flex list-unstyled mb-6">{socialsList}</ul>
     </div>

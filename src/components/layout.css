@@ -14,11 +14,12 @@ body {
   font-family: "Graphik", sans-serif;
   overflow: hidden;
   overflow-y: scroll;
+  background-color: theme(colors.bodybg3);
   background-image: radial-gradient(
     145.05% 100% at 50% 0,
-    theme(colors.bodybg1) 0,
-    theme(colors.bodybg2) 57.38%,
-    theme(colors.bodybg3) 88.16%
+    theme(colors.bodybg3) 27%,
+    theme(colors.bodybg2) 54%,
+    theme(colors.bodybg3) 81%
   );
 }
 .main-view {
@@ -43,6 +44,9 @@ p {
 }
 ul li .icon {
   color: theme(colors.cyanaqua);
+}
+ul li .icon .svg-inline--fa {
+  width: var(--space-4);
 }
 .header-section {
   background-image: linear-gradient(
@@ -85,9 +89,9 @@ ul li .icon {
     transform: translate(-50%, -50%);
 }
 .active{
-    background-color: theme(colors.cyanaqua);
+    background-color: theme(colors.blue);
 }
 .active .circle{
-    border-color: theme(colors.cyanaqua);
-    box-shadow: 0px 0px 20px 2px theme(colors.cyanaqua);
+    border-color: theme(colors.blue);
+    box-shadow: 0px 0px 20px 2px theme(colors.blue);
 }
