@@ -14,7 +14,7 @@ const Header = ({type}) => {
   }
 
   return (
-    <>
+    <div className="fixed top-25">
     {
       type === 'Horizontal' ?
      <header className="xs:visible sm:visible w-full container mx-auto">
@@ -25,7 +25,7 @@ const Header = ({type}) => {
       <Navbar type={nvdata}/>
     </header>
     }
-  </>
+  </div>
   )
 }
 

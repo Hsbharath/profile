@@ -4,8 +4,6 @@ import Dot from './dot';
 
 const  Navbar = ({type}) => {
 
-  console.log(type);
-
   const [name, setName] = useState(type.name);
   
   return (
@@ -14,9 +12,9 @@ const  Navbar = ({type}) => {
       type.type === "Horizontal" ?
       <nav className="flex flex-wrap items-center justify-center space-x-4 py-3">
         {[
-          ["About", "/about"],
-          ["Experience", "/experience"],
-          ["Projects", "/projects"],
+          ["About", "/#about"],
+          ["Experience", "/#experience"],
+          ["Projects", "/#projects"],
         ].map(([title, url]) => (
           <Link to={url} key={url} className="py-2 title text-2xl font-semibold">
             {title}
@@ -26,9 +24,9 @@ const  Navbar = ({type}) => {
       :
       <ul className="list-unstyled lg:py-28 md:py-10 nv-list">
         {[
-          ["About", "/about"],
-          ["Experience", "/experience"],
-          ["Projects", "/projects"],
+          ["About", "/#about"],
+          ["Experience", "/#experience"],
+          ["Projects", "/#projects"],
         ].map(([title, url]) => (
           <li className="mb-4 pl-3 flex items-center justify-start" key={url}>
             <Dot active={name === title}/>
