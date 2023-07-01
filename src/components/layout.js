@@ -15,20 +15,6 @@ import ExperienceInfo from "./experienceInfo"
 import ProjectsInfo from "./projectsInfo"
 
 const Layout = () => {
-  const path = window.location.hash
-
-  useEffect(() => {
-    if (path && path !== "/") {
-      const id = window.location.hash.substring(1)
-      setTimeout(() => {
-        const el = document.getElementById(id)
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" })
-          el.focus()
-        }
-      }, 0)
-    }
-  }, [path])
 
   return (
     <>
