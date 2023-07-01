@@ -1,31 +1,29 @@
 import * as React from "react"
 import Navbar from "./navbar"
 
-const Header = ({type}) => {
-
+const Header = ({ type }) => {
   const nvdata = {
-    'type': 'Vertical',
-    'name': 'About'
+    type: "Vertical",
+    name: "About",
   }
 
   const nhdata = {
-    'type': 'Horizontal',
-    'name': 'About'
+    type: "Horizontal",
+    name: "About",
   }
 
   return (
-    <div className="fixed top-25">
-    {
-      type === 'Horizontal' ?
-     <header className="xs:visible sm:visible w-full container mx-auto">
-      <Navbar type={nhdata}/>
-    </header>
-    :
-    <header className="md:visible lg:visible w-full container mx-auto">
-      <Navbar type={nvdata}/>
-    </header>
-    }
-  </div>
+    <>
+      {type === "Horizontal" ? (
+        <header className="xs:visible sm:visible w-full container mx-auto">
+          <Navbar type={nhdata} />
+        </header>
+      ) : (
+        <header className="lg:fixed lg:top-25 md:visible lg:visible sm:invisible xs:invisible mx-auto">
+          <Navbar type={nvdata} />
+        </header>
+      )}
+    </>
   )
 }
 
