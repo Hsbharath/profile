@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
-const dot = ({active}) => {
+const dot = ({ active }) => {
   return (
-    <div className={active ? 'dot active' : 'dot'}>
-        <div className="circle"></div>
+    <div className={active ? "dot active" : "dot"}>
+      <div className="circle"></div>
     </div>
   )
 }

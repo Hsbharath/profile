@@ -13,7 +13,9 @@ const profile = () => {
   const para3 = (
     <p>
       A passionate <br />
-      <span className="text-[theme(colors.blue)] font-bold tracking-wide">WEB DEVELOPER</span>
+      <span className="text-[theme(colors.blue)] font-bold tracking-wide">
+        WEB DEVELOPER
+      </span>
       <br /> I love to build user-friendly websites that leave a lasting
       impression.
     </p>
@@ -22,19 +24,26 @@ const profile = () => {
   const icon1 = (
     <p className="icon flex gap-2 items-center justify-start">
       <FontAwesomeIcon icon={faLocationDot} />
-      <span className="flex-1" >Seattle, WA</span>
+      <span className="flex-1">Seattle, WA</span>
     </p>
   )
   const icon2 = (
     <p className="icon flex gap-2 items-center justify-start">
       <FontAwesomeIcon icon={faEnvelope} />
-      <a href="mailto:bharathh.868@gmail.com" className="flex-1" >bharathh.868@gmail.com</a>
+      <a href="mailto:bharathh.868@gmail.com" className="flex-1">
+        bharathh.868@gmail.com
+      </a>
     </p>
   )
   const icon3 = (
     <p className="icon flex gap-2 items-center justify-start">
       <FontAwesomeIcon icon={faLink} />
-      <a href="https://hsbharath.dev" target="_blank" rel="noreferrer"  className="flex-1" >
+      <a
+        href="https://hsbharath.dev"
+        target="_blank"
+        rel="noreferrer"
+        className="flex-1"
+      >
         www.hsbharath.dev
       </a>
     </p>
@@ -50,7 +59,10 @@ const profile = () => {
   const social1 = (
     <p>
       <a href="https://github.com/Hsbharath" target="_blank" rel="noreferrer">
-        <FontAwesomeIcon icon={faGithub} className="text-[theme(colors.cyanaqua)]" />
+        <FontAwesomeIcon
+          icon={faGithub}
+          className="text-[theme(colors.cyanaqua)]"
+        />
         {}
       </a>
     </p>
@@ -62,7 +74,10 @@ const profile = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={faLinkedin} className="text-[theme(colors.cyanaqua)]" />
+        <FontAwesomeIcon
+          icon={faLinkedin}
+          className="text-[theme(colors.cyanaqua)]"
+        />
         {}
       </a>
     </p>
@@ -76,7 +91,7 @@ const profile = () => {
   ))
 
   return (
-    <div className="fixed top-25 lg:w-[300px] px-4">
+    <div className="lg:fixed lg:top-25 lg:w-[300px] px-4">
       <h1 className="title lg:text-6xl text-4xl text-cyan-400 antialised line-clamp-1 font-black">
         {para2}
       </h1>

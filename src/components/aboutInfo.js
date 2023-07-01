@@ -76,7 +76,7 @@ const aboutInfo = () => {
   const items = [pagetitle, data1, data2, data3, data4, data5, data6, data7]
 
   return (
-    <div className="pb-28">
+    <div className="py-20">
       {items.map((item, i) => (
         <div className="mb-6" key={i}>
           {item}
@@ -87,4 +87,3 @@ const aboutInfo = () => {
 }
 
 export default aboutInfo
-

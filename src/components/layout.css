@@ -72,26 +72,26 @@ ul li .icon .svg-inline--fa {
   color: theme(colors.cyanaqua);
 }
 .dot {
-    width: 10px;
-    height: 10px;
-    background-color: theme(colors.gray);
-    border-radius: 50%;
-    position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: theme(colors.gray);
+  border-radius: 50%;
+  position: relative;
 }
 .circle {
-    width: 20px;
-    height: 20px;
-    border: 2px solid theme(colors.gray);
-    border-radius: 50%;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid theme(colors.gray);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.active{
-    background-color: theme(colors.blue);
+.active {
+  background-color: theme(colors.blue);
 }
-.active .circle{
-    border-color: theme(colors.blue);
-    box-shadow: 0px 0px 20px 2px theme(colors.blue);
+.active .circle {
+  border-color: theme(colors.blue);
+  box-shadow: 0px 0px 20px 2px theme(colors.blue);
 }
