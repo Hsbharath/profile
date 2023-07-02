@@ -16,6 +16,7 @@ module.exports = {
       blue: "#12b1f9",
       gray: "#8492a6",
       cyanaqua: "#00dbc6",
+      bodybg0: "#00dbc620",
       bodybg1: "#1d2b41",
       bodybg2: "#162b46",
       bodybg3: "#0a1e38",
@@ -24,7 +25,7 @@ module.exports = {
       header3: "#00dbc6",
     },
     fontFamily: {
-      caveat: ["Caveat", "sans-serif"],
+      akatab: ["Akatab", "sans-serif"],
       sans: ["Graphik", "sans-serif"],
     },
     extend: {

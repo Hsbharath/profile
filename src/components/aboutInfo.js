@@ -1,10 +1,18 @@
 import * as React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 const aboutInfo = () => {
   const pagetitle = (
-    <h1 className="title lg:text-6xl text-4xl text-cyan-400 antialised line-clamp-1 font-black lg:pb-7 md:pb-7  ml-auto">
-      About
-    </h1>
+    <div className="flex items-center justify-start">
+      <h1 className="title lg:text-4xl text-4xl antialised line-clamp-1 font-bold lg:pb-7 md:pb-7">
+        About
+      </h1>
+      <FontAwesomeIcon
+        icon={faArrowRight}
+        className="text-[theme(colors.cyanaqua)] deg-45 ml-3 lg:mb-3"
+      />
+    </div>
   )
   const data1 = (
     <p className="lg:text-left md:text-left sm:text-left xs:text-left">
@@ -34,54 +42,56 @@ const aboutInfo = () => {
       tailored to meet clients' unique needs.
     </p>
   )
-  const data4 = (
-    <p className="lg:text-left md:text-left sm:text-left xs:text-left">
-      As a lifelong learner, I am always eager to expand my skill set and
-      embrace emerging technologies. I have a solid understanding of popular
-      front-end frameworks like React and Angular, allowing me to develop
-      dynamic and interactive web applications efficiently. Additionally, I stay
-      updated with the latest design principles and UX trends to create engaging
-      and visually appealing interfaces.
-    </p>
-  )
-  const data5 = (
-    <p className="lg:text-left md:text-left sm:text-left xs:text-left">
-      I approach each project with meticulous attention to detail and a
-      commitment to delivering exceptional results. I am adept at transforming
-      complex requirements into practical and elegant solutions, optimizing
-      performance and ensuring seamless user experiences across different
-      devices and platforms.
-    </p>
-  )
-  const data6 = (
-    <p className="lg:text-left md:text-left sm:text-left xs:text-left">
-      Beyond my technical prowess, I am a dedicated team player who thrives in a
-      collaborative environment. I value open communication, constructive
-      feedback, and a shared commitment to excellence. My goal is not only to
-      meet client expectations but to exceed them, forging long-lasting
-      relationships built on trust and satisfaction.
-    </p>
-  )
-  const data7 = (
-    <p className="lg:text-left md:text-left sm:text-left xs:text-left">
-      Thank you for taking the time to explore my portfolio. I invite you to
-      browse through my projects and witness firsthand the passion and expertise
-      that I bring to every endeavor. If you have any inquiries or potential
-      collaborations, please don't hesitate to reach out. I look forward to
-      connecting with you and embarking on new and exciting web development
-      journeys together.
-    </p>
-  )
+  // const data4 = (
+  //   <p className="lg:text-left md:text-left sm:text-left xs:text-left">
+  //     As a lifelong learner, I am always eager to expand my skill set and
+  //     embrace emerging technologies. I have a solid understanding of popular
+  //     front-end frameworks like React and Angular, allowing me to develop
+  //     dynamic and interactive web applications efficiently. Additionally, I stay
+  //     updated with the latest design principles and UX trends to create engaging
+  //     and visually appealing interfaces.
+  //   </p>
+  // )
+  // const data5 = (
+  //   <p className="lg:text-left md:text-left sm:text-left xs:text-left">
+  //     I approach each project with meticulous attention to detail and a
+  //     commitment to delivering exceptional results. I am adept at transforming
+  //     complex requirements into practical and elegant solutions, optimizing
+  //     performance and ensuring seamless user experiences across different
+  //     devices and platforms.
+  //   </p>
+  // )
+  // const data6 = (
+  //   <p className="lg:text-left md:text-left sm:text-left xs:text-left">
+  //     Beyond my technical prowess, I am a dedicated team player who thrives in a
+  //     collaborative environment. I value open communication, constructive
+  //     feedback, and a shared commitment to excellence. My goal is not only to
+  //     meet client expectations but to exceed them, forging long-lasting
+  //     relationships built on trust and satisfaction.
+  //   </p>
+  // )
+  // const data7 = (
+  //   <p className="lg:text-left md:text-left sm:text-left xs:text-left">
+  //     Thank you for taking the time to explore my portfolio. I invite you to
+  //     browse through my projects and witness firsthand the passion and expertise
+  //     that I bring to every endeavor. If you have any inquiries or potential
+  //     collaborations, please don't hesitate to reach out. I look forward to
+  //     connecting with you and embarking on new and exciting web development
+  //     journeys together.
+  //   </p>
+  //)
 
-  const items = [pagetitle, data1, data2, data3, data4, data5, data6, data7]
+  const items = [pagetitle, data1, data2, data3]
 
   return (
-    <div className="py-20">
-      {items.map((item, i) => (
-        <div className="mb-6" key={i}>
-          {item}
-        </div>
-      ))}
+    <div className="lg:pt-20 md:pt-10 sm:py-5 xs:py-5">
+      <div className="data-section">
+        {items.map((item, i) => (
+          <div className="mb-6" key={i}>
+            {item}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
