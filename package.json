@@ -17,6 +17,7 @@
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-sharp": "^5.11.0",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-helmet": "^6.1.0"
   },
@@ -35,7 +36,8 @@
     "build": "gatsby build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop --open --port 8000",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "serve": "gatsby clean &&  prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\" && gatsby develop --open --port 8000"
   },
   "repository": {
     "type": "git",

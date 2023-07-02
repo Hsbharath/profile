@@ -13,7 +13,7 @@ const profile = () => {
   const para3 = (
     <p>
       A passionate <br />
-      <span className="text-[theme(colors.blue)] font-bold tracking-wide">
+      <span className="title2 text-[theme(colors.blue)] font-bold tracking-wider">
         WEB DEVELOPER
       </span>
       <br /> I love to build user-friendly websites that leave a lasting
@@ -92,10 +92,10 @@ const profile = () => {
 
   return (
     <div className="lg:fixed lg:top-25 lg:w-[300px] px-4">
-      <h1 className="title lg:text-6xl text-4xl text-cyan-400 antialised line-clamp-1 font-black">
+      <h1 className="title lg:text-5xl text-4xl antialised line-clamp-1 font-bold">
         {para2}
       </h1>
-      <h3 className="title text-white text-3xl decoration-8 font-medium pb-3">
+      <h3 className="title text-white text-2xl decoration-8 font-bold pb-3">
         {para1}
       </h3>
       <div className="text-lg mb-6">{para3}</div>
