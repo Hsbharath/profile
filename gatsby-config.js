@@ -47,14 +47,6 @@ module.exports = {
         ],
         web: [
           {
-            name: `Caveat`,
-            file: `https://fonts.googleapis.com/css2?family=Caveat&display=swap`,
-          },
-          {
-            name: `Monrope`,
-            file: `https://fonts.googleapis.com/css2?family=Monrope&display=swap`,
-          },
-          {
             name: `Akatab`,
             file: `https://fonts.googleapis.com/css2?family=Akatab&display=swap`,
           },

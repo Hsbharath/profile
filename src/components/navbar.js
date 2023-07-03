@@ -15,7 +15,7 @@ const Navbar = ({ type }) => {
             <Link
               to={title.url}
               key={index}
-              className="py-2 title text-2xl font-semibold"
+              className="py-2 title text-xl font-semibold"
               onClick={() => scrollTo(title.name)}
             >
               {title.name}
@@ -35,8 +35,8 @@ const Navbar = ({ type }) => {
                   to={title.url}
                   className={
                     name.toLowerCase() === title.name.toLowerCase()
-                      ? "ml-auto py-1 z-50 border-cyanaqua border-2 bg-bodybg1 rounded-md"
-                      : "ml-auto py-1 z-50 border-gray border-2 bg-bodybg1 rounded-md"
+                      ? "ml-auto py-1 z-50 border-cyanaqua border-2 bg-bodybg1 rounded-full"
+                      : "ml-auto py-1 z-50 border-gray border-2 bg-bodybg1 rounded-full"
                   }
                   onClick={() => setName(title.name)}
                 >
