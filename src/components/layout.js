@@ -14,6 +14,8 @@ import AboutInfo from "./aboutInfo"
 import ExperienceInfo from "./experienceInfo"
 import ProjectsInfo from "./projectsInfo"
 import { dataHorizontal, dataVertical } from "../config"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 const Layout = ({ location = "" }) => {
   const path = location.pathname
@@ -54,7 +56,6 @@ const Layout = ({ location = "" }) => {
       sections.forEach(section => {
         const { top, bottom } = section.getBoundingClientRect()
         if (top <= scrollPosition && bottom >= scrollPosition) {
-          console.log(section.id)
           setTypeV({
             type: "Vertical",
             name: section.id,
@@ -91,9 +92,42 @@ const Layout = ({ location = "" }) => {
             <ProjectsInfo />
           </section>
           <div className="py-20">
+            <p className="flex flex-wrap items-center justify-bottom">
+              <a
+                href="https://brittanychiang.com/"
+                className="text-[theme(colors.gray)]"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Inspired from : Portfolio of Brittany Chiang
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="text-[theme(colors.cyanaqua)] deg-45 ml-3 lg:mb-3"
+                />
+              </a>
+            </p>
             <p className="text-[theme(colors.gray)]">
-              Coded in Visual Studio Code. Built with Gatsby.js and Tailwind
-              CSS, deployed with Firebase.
+              Coded in Visual Studio Code.
+            </p>
+            <p className="text-[theme(colors.gray)]">
+              Built with Gatsby.js and Tailwind CSS.
+            </p>
+            <p className="text-[theme(colors.gray)] mb-3">
+              Deployed on Firebase.
+            </p>
+            <p className="flex flex-wrap items-center justify-bottom">
+              <a
+                href="https://github.com/Hsbharath/profile"
+                className="text-[theme(colors.gray)]"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github Repo : Hsbharath/Profile ( Link )
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className="text-[theme(colors.cyanaqua)] deg-45 ml-3 lg:mb-3"
+                />
+              </a>
             </p>
           </div>
         </div>

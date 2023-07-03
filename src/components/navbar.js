@@ -45,6 +45,9 @@ const Navbar = ({ type }) => {
               </li>
             ))}
           </ul>
+          <div className="bg-yellow rounded mb-2 absolute top-2 right-2">
+            <p className="text-md p-2 text-center">Site is under development</p>
+          </div>
         </div>
       )}
     </>
