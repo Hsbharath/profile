@@ -46,6 +46,27 @@ const Layout = ({ location = "" }) => {
         }
       }, 0)
     }
+
+    const handlescroll = () => {
+      const sections = document.querySelectorAll("section")
+      const scrollPosition = window.scrollY
+
+      sections.forEach(section => {
+        const { top, bottom } = section.getBoundingClientRect()
+        if (top <= scrollPosition && bottom >= scrollPosition) {
+          console.log(section.id)
+          setTypeV({
+            type: "Vertical",
+            name: section.id,
+          })
+        }
+      })
+    }
+
+    window.addEventListener("scroll", handlescroll)
+    return () => {
+      window.removeEventListener("scroll", handlescroll)
+    }
   }, [path, location.hash])
 
   return (
@@ -55,7 +76,7 @@ const Layout = ({ location = "" }) => {
           <Navbar type={typeH} />
         </div>
       </div>
-      <div className="max-w-screen-xl h-screen-100 mx-auto lg:flex lg:justify-between lg:gap-8 lg:main-view relative">
+      <div className="max-w-screen-xl h-screen-100 mx-auto lg:flex lg:justify-between lg:gap-8 lg:main-view sm:px-16 relative">
         <div className="xl:w-[300px] lg:w-[300px] lg:py-20 md:py-10 sm:py-5 xs:py-5">
           <Profile />
         </div>
@@ -76,9 +97,6 @@ const Layout = ({ location = "" }) => {
             </p>
           </div>
         </div>
-        {/* <div className="xl:visible xl:w-[300px] lg:visible lg:w-[300px] px-4 lg:py-20 md:py-10 sm:py-0 xs:py-0">
-          <Navbar type={typeV} />
-        </div> */}
         <div className="xl:w-[300px] lg:w-[300px] lg:py-20 md:py-10 sm:py-5 xs:py-5">
           <div className="fixed xl:w-[250px] lg:w-[200px]">
             <Navbar type={typeV} />
