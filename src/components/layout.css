@@ -97,6 +97,7 @@ ul li .icon .svg-inline--fa {
   top: 4px;
   left: 15px;
   width: 160px;
+  background-color: theme(colors.gray);
   z-index: 40;
 }
 .active {
@@ -106,6 +107,9 @@ ul li .icon .svg-inline--fa {
 .active .line {
   border-color: theme(colors.cyanaqua);
   box-shadow: 0px 0px 20px 2px theme(colors.cyanaqua);
+}
+.active .line {
+  background-color: theme(colors.cyanaqua);
 }
 section .data-section {
   padding-bottom: 20px;

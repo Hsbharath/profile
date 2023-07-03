@@ -92,7 +92,7 @@ const projects = () => {
               alt={index}
               className="w-full h-28 bg-cover rounded-lg"
             />
-            <p className="mb-2">{projdata[index].title}</p>
+            <p className="mb-2 line-clamp-2">{projdata[index].title}</p>
           </div>
         ))}
       </div>

@@ -55,7 +55,7 @@ const experience = () => {
                   <p className="text-md font-semibold text-gray mb-2">
                     {exp_data[index].designation}
                   </p>
-                  <p className="mb-0 pl-5">{exp_data[index].details}</p>
+                  <p className="mb-0 lg:pl-20">{exp_data[index].details}</p>
                 </div>
               </div>
             </div>
