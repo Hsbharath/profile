@@ -15,6 +15,15 @@ module.exports = {
     siteUrl: `https://hsbharath.dev/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-LZ8XFKB8D7"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -54,13 +63,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-smoothscroll`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-LZ8XFKB8D7",
-        head: true,
-        anonymize: true,
-      },
-    },
   ],
 }
