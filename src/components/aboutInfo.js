@@ -4,7 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 const aboutInfo = () => {
   const pagetitle = (
-    <div className="flex items-center justify-start">
+    <div className="flex items-baseline justify-start">
       <h1 className="title lg:text-4xl text-4xl antialised line-clamp-1 font-bold lg:pb-7 md:pb-7">
         About
       </h1>

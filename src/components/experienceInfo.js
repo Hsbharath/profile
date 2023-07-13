@@ -29,7 +29,7 @@ const experience = () => {
   return (
     <div className="lg:pt-20 md:pt-20 sm:py-5 xs:py-5">
       <div className="data-section">
-        <div className="flex items-center justify-start mb-6">
+        <div className="flex items-baseline justify-start mb-6">
           <h1 className="title lg:text-4xl text-4xl antialised line-clamp-1 font-bold lg:pb-7 md:pb-7">
             Experience
           </h1>

@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 import { useState, useEffect } from "react"
 import "./layout.css"
@@ -13,9 +6,8 @@ import Profile from "./profile"
 import AboutInfo from "./aboutInfo"
 import ExperienceInfo from "./experienceInfo"
 import ProjectsInfo from "./projectsInfo"
+import Footer from "./footer"
 import { dataHorizontal, dataVertical } from "../config"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 const Layout = ({ location = "" }) => {
   const path = location.pathname
@@ -52,7 +44,6 @@ const Layout = ({ location = "" }) => {
     const handlescroll = () => {
       const sections = document.querySelectorAll("section")
       const scrollPosition = window.scrollY
-
       sections.forEach(section => {
         const { top, bottom } = section.getBoundingClientRect()
         if (top <= scrollPosition && bottom >= scrollPosition) {
@@ -91,45 +82,7 @@ const Layout = ({ location = "" }) => {
           <section id="projects">
             <ProjectsInfo />
           </section>
-          <div className="py-20">
-            <p className="flex flex-wrap items-center justify-bottom">
-              <a
-                href="https://brittanychiang.com/"
-                className="text-[theme(colors.gray)]"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Inspired from : Portfolio of Brittany Chiang
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="text-[theme(colors.cyanaqua)] deg-45 ml-3 lg:mb-3"
-                />
-              </a>
-            </p>
-            <p className="text-[theme(colors.gray)]">
-              Coded in Visual Studio Code.
-            </p>
-            <p className="text-[theme(colors.gray)]">
-              Built with Gatsby.js and Tailwind CSS.
-            </p>
-            <p className="text-[theme(colors.gray)] mb-3">
-              Deployed on Firebase.
-            </p>
-            <p className="flex flex-wrap items-center justify-bottom">
-              <a
-                href="https://github.com/Hsbharath/profile"
-                className="text-[theme(colors.gray)]"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github Repo : Hsbharath/Profile ( Link )
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="text-[theme(colors.cyanaqua)] deg-45 ml-3 lg:mb-3"
-                />
-              </a>
-            </p>
-          </div>
+          <Footer />
         </div>
         <div className="xl:w-[300px] lg:w-[300px] lg:py-20 md:py-10 sm:py-5 xs:py-5">
           <div className="fixed xl:w-[250px] lg:w-[200px]">
