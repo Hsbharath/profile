@@ -7,6 +7,10 @@
   --text-color-2: rgba(0, 0, 0, 1);
   --text-color-3: rgba();
 }
+*,
+html {
+  scroll-behavior: smooth !important;
+}
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -24,9 +28,9 @@ body {
     theme(colors.bodybg3) 81%
   );
 }
-.main-view {
+/* .main-view {
   width: 1100px !important;
-}
+} */
 a,
 p,
 h1,

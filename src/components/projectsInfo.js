@@ -75,7 +75,7 @@ const projects = () => {
 
   return (
     <div className="lg:py-20 md:py-10 sm:py-5 xs:py-5">
-      <div className="flex items-center justify-start mb-6">
+      <div className="flex items-baseline justify-start mb-6">
         <h1 className="title lg:text-4xl text-4xl antialised line-clamp-1 font-bold lg:pb-7 md:pb-7">
           Projects
         </h1>

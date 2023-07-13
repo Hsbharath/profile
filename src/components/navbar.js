@@ -1,11 +1,16 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
-import scrollTo from "gatsby-plugin-smoothscroll"
 import Dot from "./dot"
 import { navLinks } from "../config"
 
 const Navbar = ({ type }) => {
-  const [name, setName] = useState(type.name)
+  const [name, setName] = useState("")
+
+  useEffect(() => {
+    setTimeout(() => {
+      setName(type.name)
+    }, 0)
+  }, [type.name])
 
   return (
     <>
@@ -16,7 +21,6 @@ const Navbar = ({ type }) => {
               to={title.url}
               key={index}
               className="py-2 title text-xl font-semibold"
-              onClick={() => scrollTo(title.name)}
             >
               {title.name}
             </Link>
@@ -38,7 +42,6 @@ const Navbar = ({ type }) => {
                       ? "ml-auto py-1 z-50 border-cyanaqua border-2 bg-bodybg1 rounded-full"
                       : "ml-auto py-1 z-50 border-gray border-2 bg-bodybg1 rounded-full"
                   }
-                  onClick={() => setName(title.name)}
                 >
                   <span className="px-5">{title.name}</span>
                 </Link>
