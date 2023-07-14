@@ -10,6 +10,8 @@ import Footer from "./footer"
 import { dataHorizontal, dataVertical } from "../config"
 
 const Layout = ({ location = "" }) => {
+  const [left, setLeft] = useState("-600px")
+  const [top, setTop] = useState("-600px")
   const path = location.pathname
   if (location.hash) {
     dataHorizontal.name = location.hash.substring(1)
@@ -55,15 +57,30 @@ const Layout = ({ location = "" }) => {
       })
     }
 
+    const handleMouseMove = event => {
+      setLeft(event.clientX)
+      setTop(event.clientY)
+    }
+
     window.addEventListener("scroll", handlescroll)
+    window.addEventListener("mousemove", handleMouseMove)
     return () => {
       window.removeEventListener("scroll", handlescroll)
+      window.removeEventListener("mousemove", handleMouseMove)
     }
   }, [path, location.hash])
 
   return (
     <>
       <div className="relative antialiased">
+        <div
+          className="pointer-event-none cursor-selection absolute rounded-full shadow-zinc-100"
+          style={{
+            top: top,
+            left: left,
+            background: `radial-gradient(600px at ${left} ${top} , theme(colors.cyanaqua5) 17%, theme(colors.bodybg3) 37%, theme(colors.bodybg3 / 10) 100%))`,
+          }}
+        ></div>
         <div className="lg:hidden sticky top-0 left-0 right-0 mx-auto header-section z-50">
           <Navbar type={typeH} />
         </div>

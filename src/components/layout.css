@@ -24,8 +24,19 @@ body {
   background-image: radial-gradient(
     145.05% 100% at 50% 0,
     theme(colors.bodybg3) 27%,
-    theme(colors.bodybg2) 54%,
+    theme(colors.bodybg3) 54%,
     theme(colors.bodybg3) 81%
+  );
+}
+.cursor-selection {
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  background-image: radial-gradient(
+    at 50%,
+    theme(colors.cyanaqua5) 17%,
+    theme(colors.bodybg3) 37%,
+    theme(colors.bodybg3 / 10) 100%
   );
 }
 /* .main-view {
