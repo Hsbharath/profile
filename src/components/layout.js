@@ -44,6 +44,8 @@ const Layout = ({ location = "" }) => {
     }
 
     const handlescroll = () => {
+      setLeft("-300px")
+      setTop("-300px")
       const sections = document.querySelectorAll("section")
       const scrollPosition = window.scrollY
       sections.forEach(section => {
@@ -57,16 +59,24 @@ const Layout = ({ location = "" }) => {
       })
     }
 
-    const handleMouseMove = event => {
+    const handleMouseMove = (event) => {
+      setLeft(event.clientX)
+      setTop(event.clientY)
+    }
+
+    const checkClickEvent = (event) => {
+      console.log(window.screenTop, event.clientY);
       setLeft(event.clientX)
       setTop(event.clientY)
     }
 
     window.addEventListener("scroll", handlescroll)
     window.addEventListener("mousemove", handleMouseMove)
+    window.addEventListener("click", checkClickEvent)
     return () => {
       window.removeEventListener("scroll", handlescroll)
       window.removeEventListener("mousemove", handleMouseMove)
+      window.removeEventListener("click", checkClickEvent)
     }
   }, [path, location.hash])
 
