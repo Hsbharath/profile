@@ -19,8 +19,6 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   background-color: theme(colors.cyanaqua);
-  border-top: 2px solid theme(colors.cyanaqua);
-  border-bottom: 2px solid theme(colors.cyanaqua);
   background-image: radial-gradient(
     145.05% 100% at 50% 0,
     theme(colors.bodybg3) 27%,

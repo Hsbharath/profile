@@ -18,6 +18,16 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-web-vitals`,
+      options: {
+        trackingId: 'G-LZ8XFKB8D7',
+        metrics: [`FID`, `TTFB`, `LCP`, `CLS`, `FCP`],
+        eventCategory: 'Performance',
+        includeInDevelopment: false,
+        debug: false,
+      }
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
